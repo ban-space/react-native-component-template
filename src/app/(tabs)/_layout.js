@@ -27,7 +27,7 @@ const Layout = () => {
                         return focused ? <Text style={{ color, fontSize: 10 }}>Home</Text> : null;
                     },
                     tabBarIcon: ({ color, size, focused }) => {
-                        return <Home color={color} size={focused ? size : size - 5} />
+                        return <Home color={color} size={focused ? size + 5 : size } />
                     }
                 }
                 } />

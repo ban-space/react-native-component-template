@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 import { themes } from '../utility/colors'
-export const useTheme = (set) => {
+export const useTheme = create((set) => {
     return {
         themeMode: 'light',
         colors: themes.light,
@@ -18,4 +18,4 @@ export const useTheme = (set) => {
             }
         })
     }
-}
+})
