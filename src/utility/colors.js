@@ -1,3 +1,5 @@
+import { SystemBars } from "react-native-edge-to-edge";
+
 export const light = {
     // ── core surfaces ──
     bg: '#f5f5f5',   // app background
@@ -7,6 +9,7 @@ export const light = {
     border: '#e0e0e0',   // hairlines, dividers
     tabbar: '#ffffff',   // bottom nav background
 
+    SystemBar: 'dark',
     // ── actions / status ──
     accent: '#2563eb',   // links, active states, primary buttons, bookmark fill
     danger: '#dc2626',   // destructive (unfollow, delete, errors)
@@ -53,7 +56,7 @@ export const dark = {
     textMuted: '#888888',
     border: '#2a2a2a',
     tabbar: '#111111',
-
+    SystemBar: 'light',
     // ── actions / status ──
     accent: '#2563eb',   // same blue, meets contrast on dark too
     danger: '#ef4444',   // brighter red for dark background
@@ -91,3 +94,8 @@ export const dark = {
     catSpace: '#0E7490',
     catDevtools: '#92400E',
 };
+
+export const themes = {
+    light,
+    dark,
+}
