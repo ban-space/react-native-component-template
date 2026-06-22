@@ -8,7 +8,7 @@ export const light = {
     textMuted: '#555555',   // secondary / meta text
     border: '#e0e0e0',   // hairlines, dividers
     tabbar: '#ffffff',   // bottom nav background
-
+    iconColor: '#0a0a0a',
     SystemBar: 'dark',
     // ── actions / status ──
     accent: '#2563eb',   // links, active states, primary buttons, bookmark fill
@@ -57,6 +57,7 @@ export const dark = {
     border: '#2a2a2a',
     tabbar: '#111111',
     SystemBar: 'light',
+   iconColor: '#f0f0f0',
     // ── actions / status ──
     accent: '#2563eb',   // same blue, meets contrast on dark too
     danger: '#ef4444',   // brighter red for dark background

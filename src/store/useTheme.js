@@ -4,8 +4,8 @@ import { Size } from '../utility/size'
 import { scale } from '../utility/size'
 export const useTheme = create((set) => {
     return {
-        themeMode: 'light',
-        colors: themes.light,
+        themeMode: 'dark',
+        colors: themes.dark,
         fontSizes: Size.fontSizes,
         spacing: Size.spacing,
         borderRadii: Size.borderRadii,
