@@ -16,7 +16,10 @@ export const scale = { Hscale, Vscale, moderateScale, fontScale }
 const fontSizes = {
     caption: fontScale(8),   // Timestamps, tiny footnotes, badge text
     subtext: fontScale(10),   // Secondary text, small labels
-    body: fontScale(12),      // Primary reading text
+    bodySmall: fontScale(12),      // Primary reading text
+    body: fontScale(14),
+    bodyLarge: fontScale(16),
+    listTitle: fontScale(18),
     subtitle: fontScale(20),  // Sub-headers (H3)
     title: fontScale(24),     // Main screen headers (H2)
     hero: fontScale(32),

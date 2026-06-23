@@ -3,7 +3,7 @@ import { SystemBars } from "react-native-edge-to-edge";
 export const light = {
     // ── core surfaces ──
     bg: '#f5f5f5',   // app background
-    card: '#ffffff',   // cards, surfaces
+    card: '#ECEEF5',   // cards, surfaces
     text: '#0a0a0a',   // primary text
     textMuted: '#555555',   // secondary / meta text
     border: '#e0e0e0',   // hairlines, dividers
@@ -57,7 +57,7 @@ export const dark = {
     border: '#2a2a2a',
     tabbar: '#111111',
     SystemBar: 'light',
-   iconColor: '#f0f0f0',
+    iconColor: '#f0f0f0',
     // ── actions / status ──
     accent: '#2563eb',   // same blue, meets contrast on dark too
     danger: '#ef4444',   // brighter red for dark background
