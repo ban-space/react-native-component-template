@@ -1,10 +1,11 @@
 import { useState } from 'react';
-import { StyleSheet, View, Button, Text, Alert } from 'react-native';
+import { StyleSheet, View, Button, Text, Alert, ScrollView } from 'react-native';
 import { useTheme } from '../../store/useTheme';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Header from '../../component/header';
 import Icon from '../../component/icon';
 import SearchInput from '../../component/searchInput';
+import Chips from '../../component/chips';
 const index = () => {
     const [searchInput, setSearchInput] = useState("")
     const { themeMode, colors, toggleTheme, fontSizes, spacing, verticalScale, horizontalScale, moderateScale, fontScale } = useTheme()
@@ -21,9 +22,10 @@ const index = () => {
                     <Icon name="notifications-outline" action={notification} />
                 </View>
             </SafeAreaView>
-            
+
             <SearchInput value={searchInput} onChangeText={setSearchInput} />
 
+            <Chips />
         </SafeAreaView>
     );
 }
@@ -33,9 +35,9 @@ const createstyles = ({ colors, fontSizes, spacing, verticalScale, horizontalSca
         container: {
             flex: 1,
             backgroundColor: colors.bg,
+            paddingHorizontal: spacing.wlg,
         },
         headerSection: {
-            paddingHorizontal: spacing.wlg,
             paddingTop: spacing.md,
             flexDirection: 'row',
             justifyContent: 'space-between',
@@ -45,6 +47,10 @@ const createstyles = ({ colors, fontSizes, spacing, verticalScale, horizontalSca
             flexDirection: 'row',
             alignItems: 'center',
             columnGap: spacing.hlg
+        },
+        chipsContainer: {
+            flexGrow: false,
+            marginTop: spacing.hlg
         }
 
     });
