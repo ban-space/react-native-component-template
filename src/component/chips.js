@@ -17,7 +17,7 @@ const Chips = () => {
                         backgroundColor: selectedCategory == cat ? colors.accent : colors.card,
                         paddingHorizontal: spacing.wlg,
                         paddingVertical: spacing.hsm,
-                        borderRadius: borderRadii.md,
+                        borderRadius: borderRadii.lg,
                         marginLeft: spacing.wsm
                     }]}>
                     <Text style={[{ color: selectedCategory == cat ? 'white' : colors.textMuted }]}>{cat}</Text>
