@@ -9,7 +9,7 @@ const Chips = () => {
     return (
         <ScrollView horizontal
             showsHorizontalScrollIndicator={false}
-            style={{ flexGrow: 0, marginTop: spacing.hlg }}>
+            style={{ flexGrow: 0, marginTop: spacing.hlg, marginBottom: spacing.hxl }}>
             {Category.map((cat) => (
                 <Pressable key={cat} onPress={() => setSelectedCategory(cat)}
                     style={({ pressed }) => [{

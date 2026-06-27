@@ -6,6 +6,7 @@ import Header from '../../component/header';
 import Icon from '../../component/icon';
 import SearchInput from '../../component/searchInput';
 import Chips from '../../component/chips';
+import Card from '../../component/card'
 const index = () => {
     const [searchInput, setSearchInput] = useState("")
     const { themeMode, colors, toggleTheme, fontSizes, spacing, verticalScale, horizontalScale, moderateScale, fontScale } = useTheme()
@@ -26,6 +27,7 @@ const index = () => {
             <SearchInput value={searchInput} onChangeText={setSearchInput} />
 
             <Chips />
+            <Card />
         </SafeAreaView>
     );
 }
