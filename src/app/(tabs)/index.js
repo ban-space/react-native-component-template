@@ -7,6 +7,7 @@ import Icon from '../../component/icon';
 import SearchInput from '../../component/searchInput';
 import Chips from '../../component/chips';
 import Card from '../../component/card'
+import ListHeader from '../../component/ListHeader';
 const index = () => {
     const [searchInput, setSearchInput] = useState("")
     const { themeMode, colors, toggleTheme, fontSizes, spacing, verticalScale, horizontalScale, moderateScale, fontScale } = useTheme()
@@ -28,6 +29,7 @@ const index = () => {
 
             <Chips />
             <Card />
+            <ListHeader action={() => Alert.alert("See all pressed")} />
         </SafeAreaView>
     );
 }
