@@ -18,7 +18,9 @@ const Chips = () => {
                         paddingHorizontal: spacing.wlg,
                         paddingVertical: spacing.hsm,
                         borderRadius: borderRadii.lg,
-                        marginLeft: spacing.wsm
+                        marginLeft: spacing.wsm,
+                        borderWidth: 1,
+                        borderColor: selectedCategory == cat ? colors.accent : colors.border
                     }]}>
                     <Text style={[{ color: selectedCategory == cat ? 'white' : colors.textMuted }]}>{cat}</Text>
                 </Pressable>

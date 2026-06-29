@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { StyleSheet, View, Button, Text, Alert, ScrollView } from 'react-native';
+import { StyleSheet, View, Button, Text, Alert, ScrollView, FlatList } from 'react-native';
 import { useTheme } from '../../store/useTheme';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Header from '../../component/header';
@@ -30,15 +30,29 @@ const index = () => {
             <SearchInput value={searchInput} onChangeText={setSearchInput} />
 
             <Chips />
-            <Card />
-            <ListHeader action={() => Alert.alert("See all pressed")} />
-            <LatestItemList
-                title={LatestList[0].title}
-                source={LatestList[0].image}
-                author={LatestList[0].author}
-                readTime={LatestList[0].readTime}
-                iconName="bookmark-outline"
+
+            <FlatList
+                data={LatestList}
+                keyExtractor={(item) => item.id}
+                renderItem={({ item }) => (<LatestItemList
+                    title={item.title}
+                    source={item.image}
+                    author={item.author}
+                    readTime={item.readTime}
+                    iconName="bookmark-outline"
+
+                />)}
+                ListHeaderComponent={
+                    <>
+                        <Card />
+                        <ListHeader action={() => Alert.alert("See all pressed")} />
+                    </>
+                }
+                showsVerticalScrollIndicator={false}
+                contentContainerStyle={{ gap: spacing.hmd }}
+                style={{ flexGrow: false, flex: 1 }}
             />
+
         </SafeAreaView>
     );
 }

@@ -19,5 +19,7 @@ const createStyles = ({ borderRadii, colors, fontSizes, spacing, verticalScale, 
         backgroundColor: colors.card,
         padding: spacing.wsm,
         borderRadius: borderRadii.lg,
+        borderWidth: 1,
+        borderColor: colors.border,
     }
 });
