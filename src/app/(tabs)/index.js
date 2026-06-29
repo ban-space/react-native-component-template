@@ -8,6 +8,8 @@ import SearchInput from '../../component/searchInput';
 import Chips from '../../component/chips';
 import Card from '../../component/card'
 import ListHeader from '../../component/ListHeader';
+import LatestItemList from '../../component/LatestItemList';
+import { LatestList } from '../../data/latestList';
 const index = () => {
     const [searchInput, setSearchInput] = useState("")
     const { themeMode, colors, toggleTheme, fontSizes, spacing, verticalScale, horizontalScale, moderateScale, fontScale } = useTheme()
@@ -30,6 +32,13 @@ const index = () => {
             <Chips />
             <Card />
             <ListHeader action={() => Alert.alert("See all pressed")} />
+            <LatestItemList
+                title={LatestList[0].title}
+                source={LatestList[0].image}
+                author={LatestList[0].author}
+                readTime={LatestList[0].readTime}
+                iconName="bookmark-outline"
+            />
         </SafeAreaView>
     );
 }

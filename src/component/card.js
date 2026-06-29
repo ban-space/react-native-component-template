@@ -20,7 +20,7 @@ const Card = () => {
                     style={{
                         flex: 1,
                         paddingVertical: spacing.hsm,
-                        paddingHorizontal: spacing.wsm,
+                        paddingHorizontal: spacing.wmd,
                         justifyContent: 'space-between'
                     }}
                 >
