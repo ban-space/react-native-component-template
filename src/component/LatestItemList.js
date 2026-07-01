@@ -1,13 +1,14 @@
 import React from 'react';
-import { StyleSheet, View, Pressable, Image, Text } from 'react-native';
+import { StyleSheet, View, Pressable, Image, Text, Alert } from 'react-native';
 import { useTheme } from '../store/useTheme';
 import Caption from './caption';
 import Ionicons from '@expo/vector-icons/Ionicons';
-const LatestItemList = ({ title, source, author, readTime, iconName }) => {
+const LatestItemList = ({ title, source, author, readTime }) => {
+    const [isBookMarked, setIsBookMarked] = React.useState(false);
     const { colors, fontSizes, spacing, iconSizes, borderRadii } = useTheme();
     const styles = createStyles({ colors, fontSizes, spacing, iconSizes, borderRadii });
     return (
-        <Pressable style={styles.container} onPress={() => console.log("See all pressed")}>
+        <Pressable style={({ pressed }) => [styles.container, { transform: [{ scale: pressed ? 0.97 : 1 }] }]} onPress={() => Alert.alert("Pressed item ", `${title}`)}>
             <View style={styles.TextImageContainer}>
                 <View style={styles.titleContainer}>
                     <Text numberOfLines={3} style={styles.title}>{title}</Text>
@@ -16,7 +17,9 @@ const LatestItemList = ({ title, source, author, readTime, iconName }) => {
 
                 <Image resizeMode="cover" source={source} style={{ width: 100, height: 100, borderRadius: borderRadii.lg }} />
             </View>
-            <Ionicons name={iconName} size={iconSizes.md} color={colors.accent} />
+            <Ionicons name={isBookMarked ? "bookmark" : "bookmark-outline"} size={iconSizes.md} color={colors.accent} onPress={() => {
+                setIsBookMarked(!isBookMarked);
+            }} />
         </Pressable>
     );
 }

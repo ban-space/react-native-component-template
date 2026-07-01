@@ -9,7 +9,7 @@ export default function SearchInput({ value, onChangeText }) {
     }
     return (
         <View style={[styles.container, { backgroundColor: colors.card, paddingHorizontal: spacing.wsm, paddingVertical: spacing.hsm, borderRadius: borderRadii.md }]}>
-            <Icon name="search" action={() => searchingInput(value)} />
+            <Icon name="search" action={() => searchingInput(value)} isBordered={false} />
             <TextInput
                 value={value}
                 onChangeText={onChangeText}
